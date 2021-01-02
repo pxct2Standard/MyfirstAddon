@@ -1,0 +1,24 @@
+{
+    "manifest_version": 2,
+    "name": "Lesezeichen",
+    "version": "1.0",
+
+    "description": "MyfirstAddon",
+
+    "permissions": [
+      "bookmarks",
+      "tabs",
+      "activeTab"
+    ],
+
+    "browser_action": {
+      "default_title": "Lesezeichen",
+      "default_popup": "popup/chosse.html"
+    },
+    "browser_specific_settings": {
+  "gecko": {
+    "id": "tim.schaller@outlook.com",
+    "strict_min_version": "42.0"
+  }
+}
+}
