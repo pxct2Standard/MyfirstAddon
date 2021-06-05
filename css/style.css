@@ -1,0 +1,65 @@
+/* ---- reset ---- */
+
+body {
+    margin: 0;
+    font:normal 75% Arial, Helvetica, sans-serif;
+    font-family: 'Montserrat', sans-serif;
+}
+
+html, body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+canvas {
+    display: block;
+    vertical-align: bottom;
+}
+
+#cards {
+    text-align: center;
+}
+
+h2 {
+    color: transparent;
+}
+
+.card {
+    padding: 20px;
+    height: 30%;
+    box-shadow: 0 0 4px 0.5px;
+    margin: 20px;
+    display: inline-block;
+    width: calc(100vw / 4);
+    color: white;
+    margin-top: 30px;
+}
+
+/* ---- particles.js container ---- */
+
+#particles-js {
+    z-index: -1;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: #000000;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.text1 {
+    color: transparent;
+}
+
+table {
+    color: transparent;
+}
+
+.textunten {
+    text-align: center;
+    font-size: 16px;
+}

@@ -15,17 +15,17 @@ html, body {
   }
   
   .beast:hover {
-    background-color: #CFF2F2;
+    background-color: #cff2f2;
   }
   
   .beast {
-    background-color: #E5F2F2;
+    background-color: #006fe5;
   }
   
   .reset {
-    background-color: #FBFBC9;
+    background-color: #cbcb2f;
   }
   
   .reset:hover {
-    background-color: #EAEA9D;
+    background-color: #d05d0d;
   }

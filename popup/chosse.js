@@ -11,6 +11,11 @@ const voiceatap = "rSSxFokKRmuy";
 const addonstap = "kpcLYWAKAq5s";
 const othertap = "-YYFy6oxWMHp";
 const python = "qUNVFa9csfic";
+const kotlin = "dpM3-dkJ7tLW";
+const hacking = "lvm7aig8SDs1";
+const linux = "JAxY5Z0x7zZe";
+const cloud = "qLOgs-EKZZUz";
+
 
 function kaufenadd() {
     console.log('updateActiveTab');
@@ -300,6 +305,160 @@ function otheradd() {
   gettingActiveTab.then(updateTab);
 }
 
+
+function addkotlin(){
+    console.log('updateActiveTab');
+
+    function isSupportedProtocol(urlString) {
+        var supportedProtocols = ["https:", "http:", "ftp:", "file:"];
+        var url = document.createElement('a');
+        url.href = urlString;
+        return supportedProtocols.indexOf(url.protocol) !== -1;
+    }
+
+    function updateTab(tabs) {
+        if (tabs[0]) {
+            currentTab = tabs[0];
+            if (isSupportedProtocol(currentTab.url)) {
+                var searching = browser.bookmarks.search({url: currentTab.url});
+                searching.then((bookmarks) => {
+                    currentBookmark = bookmarks[0];
+                    console.log(`Url: '${currentTab.url}'`);
+                    console.log(currentBookmark);
+                    if (currentBookmark) {
+                        browser.bookmarks.remove(currentBookmark.id);
+                    } else {
+                        browser.bookmarks.create({parentId: kotlin,title: currentTab.title, url: currentTab.url});
+                    }
+
+                });
+            } else {
+                console.log(`Bookmark it! does not support the '${currentTab.url}' URL.`)
+            }
+        }
+    }
+
+    var gettingActiveTab = browser.tabs.query({active: true, currentWindow: true});
+    gettingActiveTab.then(updateTab);
+}
+
+
+function addhacking(){
+    console.log('updateActiveTab');
+
+    function isSupportedProtocol(urlString) {
+        var supportedProtocols = ["https:", "http:", "ftp:", "file:"];
+        var url = document.createElement('a');
+        url.href = urlString;
+        return supportedProtocols.indexOf(url.protocol) !== -1;
+    }
+
+    function updateTab(tabs) {
+        if (tabs[0]) {
+            currentTab = tabs[0];
+            if (isSupportedProtocol(currentTab.url)) {
+                var searching = browser.bookmarks.search({url: currentTab.url});
+                searching.then((bookmarks) => {
+                    currentBookmark = bookmarks[0];
+                    console.log(`Url: '${currentTab.url}'`);
+                    console.log(currentBookmark);
+                    if (currentBookmark) {
+                        browser.bookmarks.remove(currentBookmark.id);
+                    } else {
+                        browser.bookmarks.create({parentId: hacking,title: currentTab.title, url: currentTab.url});
+                    }
+
+                });
+            } else {
+                console.log(`Bookmark it! does not support the '${currentTab.url}' URL.`)
+            }
+        }
+    }
+
+    var gettingActiveTab = browser.tabs.query({active: true, currentWindow: true});
+    gettingActiveTab.then(updateTab);
+}
+
+
+function addlinux(){
+    console.log('updateActiveTab');
+
+    function isSupportedProtocol(urlString) {
+        var supportedProtocols = ["https:", "http:", "ftp:", "file:"];
+        var url = document.createElement('a');
+        url.href = urlString;
+        return supportedProtocols.indexOf(url.protocol) !== -1;
+    }
+
+    function updateTab(tabs) {
+        if (tabs[0]) {
+            currentTab = tabs[0];
+            if (isSupportedProtocol(currentTab.url)) {
+                var searching = browser.bookmarks.search({url: currentTab.url});
+                searching.then((bookmarks) => {
+                    currentBookmark = bookmarks[0];
+                    console.log(`Url: '${currentTab.url}'`);
+                    console.log(currentBookmark);
+                    if (currentBookmark) {
+                        browser.bookmarks.remove(currentBookmark.id);
+                    } else {
+                        browser.bookmarks.create({parentId: linux,title: currentTab.title, url: currentTab.url});
+                    }
+
+                });
+            } else {
+                console.log(`Bookmark it! does not support the '${currentTab.url}' URL.`)
+            }
+        }
+    }
+
+    var gettingActiveTab = browser.tabs.query({active: true, currentWindow: true});
+    gettingActiveTab.then(updateTab);
+}
+
+
+function addcloud(){
+    console.log('updateActiveTab');
+
+    function isSupportedProtocol(urlString) {
+        var supportedProtocols = ["https:", "http:", "ftp:", "file:"];
+        var url = document.createElement('a');
+        url.href = urlString;
+        return supportedProtocols.indexOf(url.protocol) !== -1;
+    }
+
+    function updateTab(tabs) {
+        if (tabs[0]) {
+            currentTab = tabs[0];
+            if (isSupportedProtocol(currentTab.url)) {
+                var searching = browser.bookmarks.search({url: currentTab.url});
+                searching.then((bookmarks) => {
+                    currentBookmark = bookmarks[0];
+                    console.log(`Url: '${currentTab.url}'`);
+                    console.log(currentBookmark);
+                    if (currentBookmark) {
+                        browser.bookmarks.remove(currentBookmark.id);
+                    } else {
+                        browser.bookmarks.create({parentId: cloud,title: currentTab.title, url: currentTab.url});
+                    }
+
+                });
+            } else {
+                console.log(`Bookmark it! does not support the '${currentTab.url}' URL.`)
+            }
+        }
+    }
+
+    var gettingActiveTab = browser.tabs.query({active: true, currentWindow: true});
+    gettingActiveTab.then(updateTab);
+}
+
+
+function openwebsite() {
+    browser.tabs.create({"url": "/web.html"});
+}
+
+
 function listenForClicks() {
 document.addEventListener("click", (e) => {
 
@@ -308,6 +467,8 @@ document.addEventListener("click", (e) => {
 */
 function beastNameToURL(beastName) {
 switch (beastName) {
+case "Web":
+return openwebsite();
 case "Kaufen":
 return kaufenadd();
 case "Schule":
@@ -324,6 +485,14 @@ case "Andere":
 return otheradd();
 case "Python":
 return pythonadd();
+case "Android":
+return addkotlin();
+case "Hacking":
+return addhacking();
+case "Server":
+return addlinux();
+case "Cloud":
+return addcloud();
 }
 }
 beastNameToURL(e.target.textContent)
